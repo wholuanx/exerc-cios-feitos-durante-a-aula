@@ -1,0 +1,28 @@
+listaNum = []
+maior = 0
+menor = 0
+
+for i in range (0, 5):
+    listaNum.append (int(input(f"Digite um valor para a posição {i}: ")))
+    if i == 0:
+        maior = menor = listaNum [i]
+    else: 
+        if listaNum [i] > maior:
+            maior = listaNum [i]
+        if listaNum [i] < menor:
+            menor = listaNum [i]
+
+print ("-="*30)
+print (f"Os valores digitados foram: {listaNum}")
+print (f"O MAIOR valor digitado foi: {maior} na posição ", end="")
+for ind, num in enumerate (listaNum):
+    if num == maior:
+        print(f"{ind}...", end="")
+
+print
+print(f" O MENOR numero digitado foi {menor} na posição " , end= "")
+for ind, num in enumerate(listaNum):
+    if num == menor:
+        print(f"{ind}..." , end="")
+print()
+print('-='*30)
